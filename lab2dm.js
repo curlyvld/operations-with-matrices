@@ -49,11 +49,12 @@ function count(){
         }
       }
       // Проходим по всем элементам матрицы
-      for (let i = 0; i < a.length; i++) {
+     for (let i = 0; i < a.length; i++) {
         for (let j = i + 1; j < a[i].length; j++) {
-          // Меняем знак у элемента A[i][j] и у A[j][i]
-          a[i][j] = -a[j][i];
-          skewsymmetry=false;
+          if (a[i][j] !== a[j][i]) {
+            skewsymmetry = false;
+            
+          }
         }
       }
       for (let i=0;i<a.length;i++){
